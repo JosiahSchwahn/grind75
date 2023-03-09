@@ -11,15 +11,16 @@ var maxProfit = function(prices) {
             if(profit > maxProfit){
                 maxProfit = profit;
             }
-            
         }
-
+        else{
+            leftWindow = rightWindow;
+        }
         rightWindow++;
         
     }
-    console.log(prices[leftWindow]);
-    console.log(rightWindow);
-    return (prices[rightWindow] - prices[leftWindow]);
+
+    return maxProfit;
+    
 
 };
 
